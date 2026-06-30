@@ -1,0 +1,18 @@
+// count the number of digits in the given number
+
+const countTheDigits = (num) =>{
+    let count = 0;
+    let n = Math.abs(num)
+    
+    while(n >0){
+        let digit = n%10
+      if( digit !== undefined){
+          count++;
+          n = Math.floor(n/10);
+      }
+    }
+    return count;
+}
+
+console.log((countTheDigits(1565765))) // 7
+console.log((countTheDigits(15765))) // 5
