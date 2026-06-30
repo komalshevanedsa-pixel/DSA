@@ -1,0 +1,23 @@
+//fibonacci without recursion
+const generateFibo = (n) =>{
+     let f1=0;
+    let f2=1;
+    let f3 = 0;
+ for (let i=0;i<n;i++){
+     if(i<2){
+       console.log(i)
+    }else{
+        f3 = f1 + f2
+        f1=f2
+        f2=f3;
+        console.log(f3);
+        }
+    }
+}
+generateFibo(9) 
+//0 1 1 2 3 5 8 13 21
+
+  
+    
+
+
