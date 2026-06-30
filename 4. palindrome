@@ -1,0 +1,24 @@
+// palindrome
+const palindrome = (num) =>{
+    //1 way using built in method
+    // let reverse = Number(num.toString().split('').reverse().join(''));
+    // return num === reverse ? true: false
+    
+    // 2nd way 
+    return num ===findReverse(num) ? true : false
+    
+}
+
+const findReverse = (num) =>{
+    let n = num
+    let reverse = 0;
+    while(n>0){
+        let lastDigit = n%10;
+        reverse = (reverse * 10) + lastDigit;
+        n = Math.floor(n/10)
+    }
+    return reverse;
+}
+
+console.log(palindrome(121)) // true
+console.log(palindrome(124)) // false
